@@ -478,6 +478,13 @@ const BottomHandler = () => {
                 });
 
 
+            case "/hfafc":
+                return setAp({
+                    api: process.env.NEXT_APP_URL_HFAFC,
+                    key: process.env.NEXT_APP_API_KEY_HFAFC
+                });
+
+
             default:
                 return setAp({
                     api: process.env.NEXT_APP_URL,

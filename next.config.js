@@ -245,14 +245,14 @@ const nextConfig = {
         NEXT_APP_URL_HFTJCS: 'https://horsefiretablets.com/hftjcs',
         NEXT_APP_API_KEY_HFTJCS: 'lFGBvINVYIgDnGoMUSCQBHHdoPutLQpAuakKEvoWTnerxYNxlE',
 
-        
+
         NEXT_APP_URL_HFCKS: 'https://horsefiretablets.com/hfcks',
         NEXT_APP_API_KEY_HFCKS: 'unUqsdtPSAFWSWpmJlvexjvSPHfOqnAKsvHoXyLqvSofaJOotM',
 
         NEXT_APP_URL_HFTRAZS: 'https://horsefiretablets.com/hftrazs',
         NEXT_APP_API_KEY_HFTRAZS: 'MORbVFGtnuTDgIQEdhfXAkqiXzJrUQMPnYlsVpVQbdQCXWhVrB',
 
-        
+
         NEXT_APP_URL_HFSXYS: 'https://horsefiretablets.com/hfsxys',
         NEXT_APP_API_KEY_HFSXYS: 'GqIuibmTpuITbRIkyYZdQqIMuZeqqbXbTUPstwukRjbQQlYSLc',
 
@@ -260,11 +260,11 @@ const nextConfig = {
         NEXT_APP_URL_HFTPROS: 'https://horsefiretablets.com/hftpros',
         NEXT_APP_API_KEY_HFTPROS: 'KUwrMrmpBWupbHUGpwgkeOVSDgVRVOUQDXqAJdDzUdIpVhJGxS',
 
-        
+
         NEXT_APP_URL_HFTSG: 'https://horsefiretablets.com/hftsg',
         NEXT_APP_API_KEY_HFTSG: 'xmwRAwedtmyjsOiLzvjceMmqfNYSGoBTUhBVXxeySykcTAdNeS',
 
-                
+
         NEXT_APP_URL_HFTSGF: 'https://horsefiretablets.com/hftsgf',
         NEXT_APP_API_KEY_HFTSGF: 'ualyPYRFlRMWgvVuGtVnlkmmFnppJyBATDRcoetuQYFKEyolUs',
 
@@ -274,6 +274,9 @@ const nextConfig = {
         NEXT_APP_URL_HFTAIAF: 'https://horsefiretablets.com/hftaiaf',
         NEXT_APP_API_KEY_HFTAIAF: 'JuzSoHEFHrQfgcTeIpEXicChNXPJvsFujRydveMDQOgOETpceD',
 
+
+        NEXT_APP_URL_HFAFC: ' https://horsefiretablets.com/hfafc',
+        NEXT_APP_API_KEY_HFAFC: 'TYQGpnUspDTXZLoolSqIrhpmpvyOCgEZZvxWhEMxpAnwaJmjds',
 
     },
 
