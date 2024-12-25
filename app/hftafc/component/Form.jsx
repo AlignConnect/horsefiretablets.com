@@ -10,7 +10,7 @@ const Load = dynamic(() => import("@/app/commonUse/loader/FormLoader"), {
     loading: () => <p>df</p>
 });
 
-const Fliama = dynamic(() => import('@/app/hftafc/component/FlipAmazon'));
+const Fliama = dynamic(() => import('@/app/hftafc/component/OrderNow'));
 
 const AmaFlipDialog = dynamic(() => import('@/app/commonUse/AmaFlipDialog/AmaFlipDialog'), {
     loading: () => <p>load</p>
@@ -101,7 +101,7 @@ const Form = () => {
                 loading && <Load />
             } */}
 
-            <div className="fontNoto"  >
+            <div className="fontNoto">
 
                 <div className="grid grid-cols-12 m-0 gap-6 items-center">
                     <div className="col-span-12 md:col-span-6  mt-1 md:mt-0">

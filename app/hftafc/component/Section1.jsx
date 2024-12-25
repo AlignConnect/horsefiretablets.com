@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
 import { TiArrowRightThick } from "react-icons/ti";
-import FlipAmazon from './FlipAmazon';
+import FlipAmazon from './OrderNow';
 
 
 const Form = dynamic(() => import('./Form'));
@@ -107,13 +107,13 @@ const section1 = () => {
 
 
 
-            <div className='bg-[#fffee7] py-8 px-2'>
+            <div className='bg-[#fffee7] pt-12 pb-4'>
 
-                <h1 className='text-3xl font-bold fontNoto mb-5  sm:hidden block'>
+                <h1 className='text-3xl font-bold fontNoto mb-5  sm:hidden block px-2'>
                     क्यों कमजोर है भारतीय पुरुषों का लिंग?
                 </h1>
 
-                <div className='sm:w-[70%] sm:py-8 mx-auto flex justify-center  flex-wrap-reverse sm:flex-nowrap items-center gap-5 '>
+                <div className='sm:w-[70%] sm:py-8 mx-auto flex justify-center  flex-wrap-reverse sm:flex-nowrap items-center gap-5 px-2'>
 
 
                     <div className='fontNoto '>
@@ -135,7 +135,7 @@ const section1 = () => {
                 <FlipAmazon />
 
 
-                <div className='x-style sm:w-[70%] mx-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-10 bg-[#fff116]  p-5 sm:p-10 my-5 rounded-xl  border-2 border-white '>
+                <div className='x-style w-[98%] sm:w-[70%] mx-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-10 bg-[#fff116]  pt-5 px-5 sm:p-10 my-5 rounded-xl  border-2 border-white '>
                     <div>
                         <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/e0008e08-aac2-4adf-5176-cd47d0f92700/public" alt="sdsd" loading='lazy' className='sm:min-w-[400px] rounded-full ' />
                     </div>

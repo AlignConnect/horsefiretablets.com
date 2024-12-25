@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import React from 'react'
 import { TiArrowRightThick } from 'react-icons/ti'
 
-const FlipAmazon = dynamic(() => import('./FlipAmazon'));
+const FlipAmazon = dynamic(() => import('./OrderNow'));
 
 const Section2 = () => {
     return (
@@ -132,17 +132,19 @@ const Section2 = () => {
 
 
 
-                <div className='mt-10'>
+                <div className='mt-10 mb-5'>
                     <h1 className='text-2xl sm:text-3xl sm:leading-10 fontNoto text-center font-bold'>17 शक्तिशाली जड़ीबूटियों और भस्मों से बना Horse Fire Tablet भारत का सबसे ज्यादा बिकने वाला सेक्सवर्धक है। यह नैचुरल तरीके से खोई हुई मर्दाना शक्ति को रिस्टोर करने का काम करता है।</h1>
                 </div>
 
 
-                <FlipAmazon />
+
 
             </div>
 
 
-
+            <div className='my-2'>
+                <FlipAmazon />
+            </div>
 
             <div className='bg-black'>
                 <div className='w-[100%] mx-auto'>
