@@ -4,7 +4,7 @@ import { productSlice } from './slice/product.slice';
 
 
 
-const store = configureStore({
+const storemy = configureStore({
 
     reducer: {
         [productApi.reducerPath]: productApi.reducer,
@@ -18,6 +18,6 @@ const store = configureStore({
 });
 
 
-export default store;
+export default storemy;
 
 
