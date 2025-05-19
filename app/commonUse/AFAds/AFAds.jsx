@@ -6,7 +6,7 @@ const AFAds = () => {
             <p className="text-[1.1rem] sm:text-3xl -mb-3 font-semibold text-black">We are Available:</p>
             <div className="flex w-8/12 sm:w-full justify-center items-center gap-3 sm:gap-5">
 
-                <a href="https://bit.ly/3w4Z8Ds" className="">
+                <a href="https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d" className="">
 
                     <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/1369a0a5-d191-4392-bf47-5c170ecb8600/public" alt="pic" className="w-40" width='100%' height='100%' />
 
