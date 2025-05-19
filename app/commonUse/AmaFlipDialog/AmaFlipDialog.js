@@ -23,7 +23,7 @@ const AmaFlipDialog = ({ type }) => {
 
     const { isPopupOpen, closePopup } = useGlobalContext();
 
-    const [ChLink, setChLink] = useState({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/4dbnqfC', amzn: "https://amzn.to/3ZESJeo", ar: "https://bit.ly/40NPeCB" })
+    const [ChLink, setChLink] = useState({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
 
 
 
@@ -33,22 +33,22 @@ const AmaFlipDialog = ({ type }) => {
         switch (type) {
 
             case "exo":
-                setChLink({ checkout: "https://bit.ly/48jEPAD", close: 'https://bit.ly/4aDqvUX', amzn: "https://amzn.to/3YiUlZf", ar: "https://bit.ly/4gdfpat" })
+                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
                 break;
             case "ts":
-                setChLink({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/42xgK8E', amzn: "https://amzn.to/3ZESJeo", ar: "https://bit.ly/40NPeCB" })
+                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
                 break;
 
             case "bng":
-                setChLink({ checkout: "https://bit.ly/3YGv4tJ", close: 'https://bit.ly/3AyIspy', amzn: "https://amzn.to/4cqxFeC", ar: "https://bit.ly/40NPeCB" })
+                setChLink({ checkout: "https://bit.ly/3YGv4tJ", close: 'https://bit.ly/3AyIspy', amzn: "https://amzn.to/4cqxFeC", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
                 break;
 
             case "english":
-                setChLink({ checkout: "https://bit.ly/3An6CmM", close: 'https://bit.ly/3SDyTff', amzn: "https://amzn.to/3WvQTJD", ar: "https://bit.ly/40NPeCB" })
+                setChLink({ checkout: "https://bit.ly/3An6CmM", close: 'https://bit.ly/3SDyTff', amzn: "https://amzn.to/3WvQTJD", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
 
                 break;
             default:
-                setChLink({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/4dbnqfC', amzn: "https://amzn.to/3ZESJeo", ar: "https://bit.ly/40NPeCB" })
+                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
                 break;
         }
 
@@ -79,8 +79,8 @@ const AmaFlipDialog = ({ type }) => {
                         aria-label="close"
                         onClick={() => {
                             closePopup();
-                            window.location.href = ChLink.close;
-                            // window.location.href = "https://arayurveda.shop/products/horse-fire-tablets";
+                            // window.location.href = ChLink.close;
+                            window.location.href = "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d";
 
                         }}
                         sx={{
@@ -116,7 +116,7 @@ const AmaFlipDialog = ({ type }) => {
                                         <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/34d3a54e-ce20-4c0a-4b55-052f66910a00/public" alt="sdsd" loading="lazy" />
                                     </div>
 
-                                  
+
 
                                     <div>
                                         <small className="text-white  bg-[#01a3a0] px-2 py-1 rounded-sm uppercase">Best Seller</small>
@@ -171,7 +171,7 @@ const AmaFlipDialog = ({ type }) => {
                                     <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/1369a0a5-d191-4392-bf47-5c170ecb8600/public" alt="asdasd" loading="lazy" className="object-cover w-[70%] mx-auto sm:w-[50%]" />
                                 </div>
 
-                               
+
 
                                 <div className="w-[50%] text-center">
                                     <a href={ChLink.checkout} className="bg-[#fc641b]  text-white text-[10px] sm:text-sm py-2 px-3 sm:px-5 block myx">BUY NOW</a>
@@ -504,7 +504,7 @@ export default AmaFlipDialog
 
 //     const { isPopupOpen, closePopup } = useGlobalContext();
 
-//     const [ChLink, setChLink] = useState({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/4dbnqfC' })
+//     const [ChLink, setChLink] = useState({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
 
 //     useEffect(() => {
 
@@ -512,14 +512,14 @@ export default AmaFlipDialog
 //         switch (type) {
 
 //             case "exo":
-//                 setChLink({ checkout: " https://bit.ly/48jEPAD", close: 'https://bit.ly/4dbnqfC' })
+//                 setChLink({ checkout: " https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
 //                 break;
 //             case "ts":
-//                 setChLink({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/4dbnqfC' })
+//                 setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
 //                 break;
 
 //             default:
-//                 setChLink({ checkout: "https://bit.ly/49PTnY2", close: 'https://bit.ly/4dbnqfC' })
+//                 setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
 //                 break;
 //         }
 //         return () => {
@@ -613,8 +613,8 @@ export default AmaFlipDialog
 //                                             </div>
 
 //                                             <div className="AmaFlipPop" style={{ paddingTop: '-0.5rem' }}>
-//                                                 {/* <a href={"https://amzn.to/4aKP4yD"} style={{ textDecoration: 'none' }}> */}
-//                                                 <a href={"https://amzn.to/3YiUlZf"} style={{ textDecoration: 'none' }}>
+//                                                 {/* <a href={"https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1"} style={{ textDecoration: 'none' }}> */}
+//                                                 <a href={"https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1"} style={{ textDecoration: 'none' }}>
 //                                                     <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/3edacd08-1afb-49b1-9aba-2cdda7681400/public" className='OrderNowPopAmaFlip' alt="pic" style={{ width: '75%' }} /></a>
 //                                             </div>
 

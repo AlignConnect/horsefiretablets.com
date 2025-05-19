@@ -5,7 +5,10 @@ const nextConfig = {
         NEXT_APP_API_URL: 'https://api.brahmikalp.com/api/',
 
 
-        NEXT_APP_API_URL_SHOPIFY: "https://shopifyapi.plantifygarden.in",
+        // NEXT_APP_API_URL_SHOPIFY: "https://shopifyapi.plantifygarden.in",
+
+
+        NEXT_APP_API_URL_SHOPIFY: "https://webapi.brahmikalp.com",
 
 
         SHOPIFY_GENERATE_TOKEN:
