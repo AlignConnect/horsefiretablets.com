@@ -321,6 +321,10 @@ const nextConfig = {
         NEXT_APP_API_KEY_HFTVHTF: 'LTEKlvQiDDLwyhGlWPUFIrwRJIzMcOTrOSsaqYcBnDBiWTRJWC',
 
 
+        
+        NEXT_APP_URL_HFTSZ: 'https://horsefiretablets.com/hftsz',
+        NEXT_APP_API_KEY_HFTSZ: 'JaBugsAZKOJGJpTilIZnsGHtbjzuuaxUDxCwhecpYbULXvbFEU',
+
     },
 
     images: {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import Joi from "joi";
 export class CheckoutFile {
-  constructor() { }
+  constructor() {}
 
   static getCheckOutData = async ({
     APP_API_URL,
@@ -568,7 +568,6 @@ export const handleCheckApiKey = () => {
         get_next_key = process.env.NEXT_APP_API_KEY_HFTVF;
         break;
 
-
       case "/hftnxt":
         get_next_url = process.env.NEXT_APP_URL_HFTNXT;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTNXT;
@@ -579,18 +578,20 @@ export const handleCheckApiKey = () => {
         get_next_key = process.env.NEXT_APP_API_KEY_HFTNXTF;
         break;
 
-
       case "/hftvht":
         get_next_url = process.env.NEXT_APP_URL_HFTVHT;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTVHT;
         break;
-
 
       case "/hftvhtf":
         get_next_url = process.env.NEXT_APP_URL_HFTVHTF;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTVHTF;
         break;
 
+      case "/hftsz":
+        get_next_url = process.env.NEXT_APP_URL_HFTSZ;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFTSZ;
+        break;
 
       default:
         get_next_url = process.env.NEXT_APP_URL;

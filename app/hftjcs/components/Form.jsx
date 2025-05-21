@@ -121,7 +121,7 @@ const Form = () => {
                 className="bg-[black]"
             >
 
-                <h1 className="text-2xl md:text-[2vw] text-green-500 text-center font-bold  mb-4 mx-6 leading-tight sm:px-10">कॉल पर विशेषज्ञ डॉक्टरों से मुफ्त सलाह के लिए फॉर्म भरें!</h1>
+                <h1 className="text-2xl md:text-[2vw] text-green-500 text-center font-bold  mb-4 pt-4 mx-6 leading-tight sm:px-10">कॉल पर विशेषज्ञ डॉक्टरों से मुफ्त सलाह के लिए फॉर्म भरें!</h1>
                 <div className="form_warning_bg">
 
                     <div className="flex items-center justify-center">

@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       <head>
 
         {/* <!-- Criteo Loader File --> */}
-        <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=119701" async="true"></script>
+        <script type="text/javascript" src="//dynamic.criteo.com/js/ld/ld.js?a=119701" async={true}></script>
         {/* <!-- END Criteo Loader File --> */}
 
 

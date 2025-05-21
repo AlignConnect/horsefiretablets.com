@@ -558,6 +558,13 @@ const BottomHandler = () => {
                 });
 
 
+            case "/hftsz":
+                return setAp({
+                    api: process.env.NEXT_APP_URL_HFTSZ,
+                    key: process.env.NEXT_APP_API_KEY_HFTSZ
+                });
+
+
 
 
             default:
