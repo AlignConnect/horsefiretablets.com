@@ -31,7 +31,6 @@ const BottomHandler = () => {
                 .catch((error) => error);
             if (Result.massage = "success") {
 
-                // console.log(Result)
 
                 setCallDetail({ callStatus: Result.all_call[0].call_status ? true : false, phoneNumber: Result.all_call[0].phonenumber })
                 return

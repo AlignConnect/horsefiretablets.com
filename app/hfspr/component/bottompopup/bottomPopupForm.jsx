@@ -7,37 +7,6 @@ import Link from "next/link";
 
 const BottomPopupForm = () => {
 
-    // const dispatch = useDispatch()
-
-    // const router = useRouter();
-
-
-
-    // const searchParams = useSearchParams();
-
-    // const taboola_tracking = searchParams.get('tbclid');
-
-
-    // const productInfo = useSelector((state) => state.productInfo)
-
-    // const products = productInfo?.productsdata
-
-    // const quantity = productInfo?.quantity
-
-    // const allVariants = productInfo?.allVariants
-
-    // const selectProducts = productInfo?.selectProducts
-
-    // const handleChangeSingleVarient = (event) => {
-    //     const variantId = event.target.value;
-    //     // console.log('variantId: ', variantId);
-    //     const selected = allVariants.find((v) => {
-    //         return v.id === Number(variantId)
-    //     });
-    //     // console.log('selected: ', selected);
-    //     dispatch(changeSelectedProduct({ selectProducts: selected }))
-    // };
-
 
     return (
         <div className="fontPoppins bg-white  bottom_pop">

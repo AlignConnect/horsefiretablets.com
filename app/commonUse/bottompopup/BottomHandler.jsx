@@ -565,6 +565,19 @@ const BottomHandler = () => {
                 });
 
 
+            case "/hfrv1":
+                return setAp({
+                    api: process.env.NEXT_APP_URL_HFRV1,
+                    key: process.env.NEXT_APP_API_KEY_HFRV1
+                });
+
+            case "/hfrv1f":
+                return setAp({
+                    api: process.env.NEXT_APP_URL_HFRV1F,
+                    key: process.env.NEXT_APP_API_KEY_HFRV1F
+                });
+
+
 
 
             default:

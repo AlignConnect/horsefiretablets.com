@@ -19,7 +19,6 @@ const page = () => {
     const orderId = searchParams.get('orderId')
 
 
-    // console.log('orderId: ', orderId);
 
 
     const getOrderIdData = async (orderId) => {
@@ -27,13 +26,11 @@ const page = () => {
         const data = await order_status_info.json()
         if (data.message === "success") {
 
-            // console.log(new Date().toISOString())
 
             const originalDate = new Date(data?.Orders?.[0]?.created_at);
 
             const newDate = new Date(originalDate.getTime() + 12 * 60 * 60 * 1000);
 
-            // console.log('newDate <= new Date(): ', newDate <= new Date());
             if (newDate <= new Date()) {
                 return window.location.href = `/checkout`
             }
@@ -54,7 +51,6 @@ const page = () => {
 
     }, [orderId])
 
-    // console.log(orderData)
 
     return (
 

@@ -9,15 +9,11 @@ const ShiProcket = () => {
     const productInfo = useSelector((state) => state.productslice);
 
 
-    // console.log("productInfo,productInfo", productInfo)
 
     const [tagsall, settagsall] = useState("");
-    // console.log("tagsall: ", tagsall);
 
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [loading, setLoading] = useState(false);
-    // const pathnameurl = ["brf"];
-    // const googlepathnameurl = ["brcgg"];
 
     useEffect(() => {
         const v = localStorage.getItem("PATH");
@@ -65,10 +61,8 @@ const ShiProcket = () => {
     };
 
     const handleConfirmPlaceOrder = async () => {
-        // console.log("Confirm & place order clicked!");
 
         if (window.conversion_code) {
-            // console.log('window.conversion_code: ', window.conversion_code);
             window.gtag("event", "conversion", {
                 send_to: window.conversion_code,
                 event_callback: () => {
@@ -91,21 +85,18 @@ const ShiProcket = () => {
         } else if (hftdirectsale_tacking) {
             trackingUrl = `https://syndication.exoclick.com/tag.php?goal=2d51d8ba95dc166fdff0e97d1418b42c&tag=${hftdirectsale_tacking}`
         }
-        console.log("trackingUrl: ", trackingUrl);
 
         try {
             await fetch(trackingUrl, {
                 method: "GET",
                 mode: "no-cors",
             });
-            console.log("tracking successfully");
         } catch (error) {
             console.error("Tracking error:", error);
         }
     };
 
     useEffect(() => {
-        // console.log(window.location.pathname.replace(/\//g, ""));
 
         const observer = new MutationObserver((mutationsList) => {
             mutationsList.forEach((mutation) => {
@@ -118,9 +109,6 @@ const ShiProcket = () => {
                             node.tagName === "FORM" &&
                             node.method.toLowerCase() === "post"
                         ) {
-                            // console.log("node.nodeType: ", node.nodeType);
-                            // console.log("node.tagName: ", node.tagName);
-                            // console.log("node.method: ", node.method);
                             handleConfirmPlaceOrder();
 
                             // if (

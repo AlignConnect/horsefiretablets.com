@@ -10,6 +10,7 @@ import { Poppins } from 'next/font/google';
 
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { reasons } from './Helper';
+import BitlyLinks from '@/components/hooks/Bitlylink';
 
 
 
@@ -22,6 +23,10 @@ const poppin = Poppins({
 
 const Checkout = () => {
 
+
+    const links = BitlyLinks()
+
+
     const { allVariants, selectProducts } = useSelector(store => store.productslice);
 
     const dispatch = useDispatch();
@@ -33,7 +38,6 @@ const Checkout = () => {
     }
 
 
-    // console.log(allVariants, selectProducts)
 
 
 
@@ -162,21 +166,30 @@ const Checkout = () => {
             </div>
 
 
-            <div className='text-center'>
-                <ShiProcket />
+            <div className='text-center '>
+                {/* <ShiProcket /> */}
+                <div className="py-5">
+
+                    <div>
+                        <a href='/checkout' className="bg-green-700 fontJosefin sm:text-xl text-center text-white font-semibold pt-1 pb-1 mt-3 sm:mt-0 px-4 rounded w-full mx-auto sm:px-14">
+                            BUY NOW
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
             <div className="text-lg font-semibold text-center">We are Available on</div>
 
             <div className="flex items-center gap-7 py-3 justify-center">
-                <a href="https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d">
+                <a href={links?.flipkartMain}>
                     <img
                         src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/1369a0a5-d191-4392-bf47-5c170ecb8600/public"
                         alt=""
                         className="sm:w-40 w-32 mx-auto"
                     />
                 </a>
-                <a href="https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1">
+                <a href={links?.amazonMain}>
                     <img
                         src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/3edacd08-1afb-49b1-9aba-2cdda7681400/public"
                         alt=""

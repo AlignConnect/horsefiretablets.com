@@ -18,7 +18,6 @@ const About = () => {
 
 
     let sliderRef = useRef(null);
-    // console.log('sliderRef: ', sliderRef);
 
     const next = () => {
         sliderRef.slickNext();

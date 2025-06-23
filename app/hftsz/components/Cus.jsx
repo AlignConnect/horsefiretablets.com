@@ -23,7 +23,6 @@ const MostSelling = dynamic(() => import('@/app/commonUse/mostSelling/most_selli
 const Cus = () => {
 
     let sliderRef = useRef(null);
-    // console.log('sliderRef: ', sliderRef);
 
     const next = () => {
         sliderRef.slickNext();

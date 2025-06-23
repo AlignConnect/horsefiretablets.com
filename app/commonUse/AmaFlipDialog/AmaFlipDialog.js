@@ -10,6 +10,7 @@ import { Noto_Serif_Devanagari } from "next/font/google";
 import { IconButton } from '@mui/material';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import BitlyLinks from "@/components/hooks/Bitlylink";
 
 
 const noto = Noto_Serif_Devanagari({
@@ -20,45 +21,67 @@ const noto = Noto_Serif_Devanagari({
 
 const AmaFlipDialog = ({ type }) => {
 
+    const links = BitlyLinks();
+
 
     const { isPopupOpen, closePopup } = useGlobalContext();
 
-    const [ChLink, setChLink] = useState({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
-
+    const [ChLink, setChLink] = useState({
+        checkout: links?.flipkartCheckout,
+        close: links?.close,
+        amzn: links?.amazonCheckout,
+        ar: links?.arCheckout
+    })
 
 
     useEffect(() => {
 
+        setChLink({
+            checkout: links?.flipkartCheckout,
+            close: links?.close,
+            amzn: links?.amazonCheckout,
+            ar: links?.arCheckout
+        })
 
-        switch (type) {
-
-            case "exo":
-                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
-                break;
-            case "ts":
-                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
-                break;
-
-            case "bng":
-                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets"  })
-                break;
-
-            case "english":
-                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets"  })
-
-                break;
-            default:
-                setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://arayurveda.shop/products/horse-fire-tablets', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
-                break;
-        }
+    }, [links])
 
 
-        return () => {
 
-        }
-    }, [])
+
+    // useEffect(() => {
+
+
+    //     switch (type) {
+
+    //         case "exo":
+    //             setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
+    //             break;
+    //         case "ts":
+    //             setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
+    //             break;
+
+    //         case "bng":
+    //             setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
+    //             break;
+
+    //         case "english":
+    //             setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
+
+    //             break;
+    //         default:
+    //             setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d', amzn: "https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1", ar: "https://arayurveda.shop/products/horse-fire-tablets" })
+    //             break;
+    //     }
+
+
+    //     return () => {
+
+    //     }
+    // }, [])
+
+
     return (
-        <div>
+        <div >
 
             <Dialog
                 open={isPopupOpen}
@@ -77,10 +100,11 @@ const AmaFlipDialog = ({ type }) => {
                 }}>
                     <IconButton
                         aria-label="close"
+                        LinkComponent={"a"}
+                        href={ChLink.close}
                         onClick={() => {
                             closePopup();
-                            window.location.href = ChLink.close;
-                            // window.location.href = "https://arayurveda.shop/products/horse-fire-tablets";
+                            // window.location.href = "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d";
 
                         }}
                         sx={{
@@ -100,12 +124,13 @@ const AmaFlipDialog = ({ type }) => {
                     <div className="">
 
 
-
+                        {/* // FLIPKART */}
                         <div className="pb-4 w-[99%] mx-auto ">
 
 
 
                             <div className="flex items-center">
+
 
 
 
@@ -116,7 +141,7 @@ const AmaFlipDialog = ({ type }) => {
                                         <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/34d3a54e-ce20-4c0a-4b55-052f66910a00/public" alt="sdsd" loading="lazy" />
                                     </div>
 
-                                  
+
 
                                     <div>
                                         <small className="text-white  bg-[#01a3a0] px-2 py-1 rounded-sm uppercase">Best Seller</small>
@@ -140,11 +165,11 @@ const AmaFlipDialog = ({ type }) => {
                                         </div>
 
                                         <div>
-                                            <p className="text-[14px] pt-1 font-bold">7330 Ratings &  1138 Reviews</p>
+                                            <p className="text-[14px] pt-1 font-bold text-black">7330 Ratings &  1138 Reviews</p>
                                         </div>
 
                                         <div>
-                                            <p className="text-[12px]"><b>1500+ people  bought</b> in last 30 days</p>
+                                            <p className="text-[12px] text-black"><b>1500+ people  bought</b> in last 30 days</p>
                                         </div>
 
 
@@ -152,7 +177,7 @@ const AmaFlipDialog = ({ type }) => {
                                     </div>
 
                                     <div>
-                                        <p className="text-[13px] pt-4 font-semibold mycolor"><b>Flipkart</b> से खरीदने के लिए क्लिक करें</p>
+                                        <p className="text-[13px] pt-4 font-semibold mycolor text-black"><b>Flipkart</b> से खरीदने के लिए क्लिक करें</p>
                                     </div>
 
                                 </div>
@@ -171,7 +196,7 @@ const AmaFlipDialog = ({ type }) => {
                                     <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/1369a0a5-d191-4392-bf47-5c170ecb8600/public" alt="asdasd" loading="lazy" className="object-cover w-[70%] mx-auto sm:w-[50%]" />
                                 </div>
 
-                               
+
 
                                 <div className="w-[50%] text-center">
                                     <a href={ChLink.checkout} className="bg-[#fc641b]  text-white text-[10px] sm:text-sm py-2 px-3 sm:px-5 block myx">BUY NOW</a>
@@ -219,11 +244,11 @@ const AmaFlipDialog = ({ type }) => {
                                         </div>
 
                                         <div>
-                                            <p className="text-[14px] pt-1 font-bold">991 global Ratings</p>
+                                            <p className="text-[14px] pt-1 font-bold text-black">991 global Ratings</p>
                                         </div>
 
                                         <div>
-                                            <p className="text-[12px]"><b>2000+ people  bought</b> in last 30 days</p>
+                                            <p className="text-[12px] text-black"><b>2000+ people  bought</b> in last 30 days</p>
                                         </div>
 
 
@@ -231,7 +256,7 @@ const AmaFlipDialog = ({ type }) => {
                                     </div>
 
                                     <div>
-                                        <p className="text-[13px] pt-4 font-semibold mycolor"><strong>Amazon</strong> से खरीदने के लिए क्लिक करें</p>
+                                        <p className="text-[13px] pt-4 font-semibold mycolor text-black"><strong>Amazon</strong> से खरीदने के लिए क्लिक करें</p>
                                     </div>
 
                                 </div>
@@ -297,15 +322,15 @@ const AmaFlipDialog = ({ type }) => {
                                         </div>
 
                                         <div>
-                                            <p className="text-[14px] pt-1 font-bold">823 Reviews</p>
+                                            <p className="text-[14px] pt-1 font-bold text-black">823 Reviews</p>
                                         </div>
 
                                         <div>
-                                            <p className="text-[12px] font-bold"><b className="text-[#fc641b]">EXTRA 10% OFF</b> ON ONLINE PAYMENT</p>
+                                            <p className="text-[12px] font-bold text-black"><b className="text-[#fc641b]">EXTRA 10% OFF</b> ON ONLINE PAYMENT</p>
                                         </div>
 
                                         <div>
-                                            <p className="text-[12px]"><b>3500+ people  bought</b> in last 30 days</p>
+                                            <p className="text-[12px] text-black"><b>3500+ people  bought</b> in last 30 days</p>
                                         </div>
 
 
@@ -328,7 +353,7 @@ const AmaFlipDialog = ({ type }) => {
                             </div>
 
                             <div className="w-full">
-                                <p className="text-[12px] pt-4 font-semibold mycolor"><b>OFFICIAL WEBSITE</b> से खरीदने के लिए क्लिक करें</p>
+                                <p className="text-[12px] pt-4 font-semibold mycolor text-black"><b>OFFICIAL WEBSITE</b> से खरीदने के लिए क्लिक करें</p>
                             </div>
 
 
@@ -480,164 +505,3 @@ const AmaFlipDialog = ({ type }) => {
 }
 
 export default AmaFlipDialog
-
-// import { useGlobalContext } from "@/app/statemanage/context";
-
-
-
-
-// import React, { useEffect, useState } from 'react'
-// import Dialog from '@mui/material/Dialog';
-// import DialogContent from '@mui/material/DialogContent';
-// import { Noto_Serif_Devanagari } from "next/font/google";
-// import { IconButton } from '@mui/material';
-
-
-// const noto = Noto_Serif_Devanagari({
-//     subsets: ['devanagari'],
-//     display: 'swap',
-//     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
-// });
-
-// const AmaFlipDialog = ({ type }) => {
-
-
-//     const { isPopupOpen, closePopup } = useGlobalContext();
-
-//     const [ChLink, setChLink] = useState({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
-
-//     useEffect(() => {
-
-
-//         switch (type) {
-
-//             case "exo":
-//                 setChLink({ checkout: " https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
-//                 break;
-//             case "ts":
-//                 setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
-//                 break;
-
-//             default:
-//                 setChLink({ checkout: "https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d", close: 'https://bit.ly/4dbnqfC' })
-//                 break;
-//         }
-//         return () => {
-
-//         }
-//     }, [])
-//     return (
-//         <div>
-
-//             <Dialog
-//                 open={!isPopupOpen}
-//                 maxWidth='xs'
-//                 sx={{
-//                     "& .MuiPaper-root.MuiDialog-paper": {
-//                         mx: 2,
-//                         my: 0,
-//                         maxHeight: 'calc(100% - 40px)'
-//                     }
-//                 }}
-//             >
-//                 <DialogContent sx={{
-//                     px: 1,
-//                     py: 2
-//                 }}>
-//                     <IconButton
-//                         aria-label="close"
-//                         onClick={() => {
-//                             closePopup();
-//                             // window.location.href = ChLink.close;
-//                             window.location.href = "https://arayurveda.shop/products/horse-fire-tablets";
-//                         }}
-//                         sx={{
-//                             position: 'absolute',
-//                             right: { xs: 5, sm: 20 },
-//                             top: 5,
-//                             color: 'black',
-//                             border: '1px solid black',
-//                             px: 1,
-//                             py: 0
-//                         }}
-//                     >
-//                         x
-//                     </IconButton>
-//                     <div className={`${noto.className}   text-black`}>
-//                         <div className="bg-[white] ">
-
-//                             <section className="text-end " style={{ fontFamily: "sans-serif" }}>
-
-//                                 <div className='text-center'>
-//                                     <section className="w-full pyd-2">
-//                                         <a href={ChLink.checkout} style={{ textDecoration: 'none' }}><img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/87383624-e24f-4d1c-c588-52ac0c861300/public" alt="no" className="" /></a>
-//                                     </section>
-
-//                                     <section className="p-2 bg-[white] text-center font-bold border border-white rounded-[5px] mx-2 flex justify-center items-center gap-2" >
-//                                         <div className='w-[3rem] md:w-[5rem]'  >
-//                                             <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/edb2a474-9f8b-4f9d-5286-162720cb6600/public" alt="no" className="w-full" />
-//                                         </div>
-
-//                                         <div className='text-md'>
-//                                             Buy from Trusted Website
-//                                         </div>
-//                                     </section>
-
-//                                     <div className='text-md ' >
-//                                         Flipkart से खरीदने के लिए निचे क्लिक करें
-//                                     </div>
-
-//                                     <div className="grid justify-center my-1">
-//                                         <div className="flex items-center gap-2">
-//                                             <div className="fingImg11">
-//                                                 <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/624185b0-363f-4a93-6efc-538c054a9d00/public" alt="" width={'100%'} />
-//                                             </div>
-
-//                                             <div className="AmaFlipPop" style={{ paddingTop: '-0.5rem' }}>
-//                                                 <a href={ChLink.checkout} style={{ textDecoration: 'none' }}><img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/1369a0a5-d191-4392-bf47-5c170ecb8600/public" className='OrderNowPopAmaFlip' alt="pic" style={{ width: '75%' }} /></a>
-//                                             </div>
-
-
-//                                             <div className="fingImg">
-//                                                 <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/624185b0-363f-4a93-6efc-538c054a9d00/public" alt="" width={'100%'} />
-//                                             </div>
-//                                         </div>
-//                                     </div>
-//                                     <div className='text-md  mt-5 mb-2 font-noto' >
-//                                         Amazon से खरीदने के लिए निचे क्लिक करें
-//                                     </div>
-//                                     <div className="grid justify-center">
-//                                         <div className="flex items-center gap-2">
-//                                             <div className="fingImg11">
-//                                                 <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/624185b0-363f-4a93-6efc-538c054a9d00/public" alt="" width={'100%'} />
-//                                             </div>
-
-//                                             <div className="AmaFlipPop" style={{ paddingTop: '-0.5rem' }}>
-//                                                 {/* <a href={"https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1"} style={{ textDecoration: 'none' }}> */}
-//                                                 <a href={"https://www.amazon.in/Ayurveda-HorseFire-Tablet-Men/dp/B0BYJ8KM7S/ref=pd_rhf_cr_s_pd_crcd_d_sccl_1_4/259-5652770-9119827?th=1"} style={{ textDecoration: 'none' }}>
-//                                                     <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/3edacd08-1afb-49b1-9aba-2cdda7681400/public" className='OrderNowPopAmaFlip' alt="pic" style={{ width: '75%' }} /></a>
-//                                             </div>
-
-
-//                                             <div className="fingImg">
-//                                                 <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/624185b0-363f-4a93-6efc-538c054a9d00/public" alt="" width={'100%'} />
-//                                             </div>
-//                                         </div>
-//                                     </div>
-
-//                                     <div className='font-noto bg-[#ffa800] pt-2 my-4 -mx-1 px-1 rounded-md text-center font-bold text-md'>आपकी यौन समस्या का 100% गारंटीड इलाज</div>
-
-//                                 </div>
-
-//                             </section>
-//                         </div>
-//                     </div>
-
-//                 </DialogContent>
-
-//             </Dialog>
-//         </div>
-//     )
-// }
-
-// export default AmaFlipDialog

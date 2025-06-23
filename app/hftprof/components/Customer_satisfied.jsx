@@ -14,7 +14,6 @@ const YoutubeFrame = dynamic(() => import('./YoutubeFrame'), {
 const Customer_satisfied = () => {
 
     let sliderRef = useRef(null);
-    // console.log('sliderRef: ', sliderRef);
 
     const next = () => {
         sliderRef.slickNext();   

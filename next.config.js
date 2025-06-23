@@ -325,6 +325,13 @@ const nextConfig = {
         NEXT_APP_URL_HFTSZ: 'https://horsefiretablets.com/hftsz',
         NEXT_APP_API_KEY_HFTSZ: 'JaBugsAZKOJGJpTilIZnsGHtbjzuuaxUDxCwhecpYbULXvbFEU',
 
+
+        NEXT_APP_URL_HFRV1: 'https://horsefiretablets.com/hfrv1',
+        NEXT_APP_API_KEY_HFRV1: 'SfvLrXiuJvMuGVfxwCIchoHbGgKwFznGYhHhLpdawdhEHQtayy',
+
+        NEXT_APP_URL_HFRV1F: 'https://horsefiretablets.com/hfrv1f',
+        NEXT_APP_API_KEY_HFRV1F: 'qdFPAJZAFBFxuykjRlCnDDeFEuHPLMnzoyDWmCbvdbQiyxkIMC',
+
     },
 
     images: {

@@ -12,56 +12,10 @@ const poppin = Poppins({
 });
 
 
-// const dragstart = (start) => {
-
-//     console.log(start.target);
-//     console.log("trigger is start")
-//     start.target.className += " border-2 border-red-400"
-//     setTimeout(() => {
-//         start.target.className += " hidden"
-//     }, 0);
-
-// }
-
-
-// const dragend = (end) => {
-
-//     console.log(end.target);
-//     console.log("trigger is end")
-//     end.target.className = "imgbox"
-// }
 
 
 
 
-// const dragover = (over) => {
-//     over.preventDefault();
-//     console.log("over")
-
-// }
-
-
-// const dragenter = (enter) => {
-
-//     console.log("enter")
-
-// }
-
-
-// const dragleave = (leave) => {
-
-//     console.log("leave")
-
-// }
-
-
-// const drop = (drop) => {
-
-//     console.log("drop")
-
-//     drop.target.append(document.querySelector(".imgbox"))
-
-// }
 
 
 

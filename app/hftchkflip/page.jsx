@@ -33,14 +33,12 @@ const page = () => {
         let value = 0;
         const v = (arr) => {
             for (let i = 0; i < arr.length; i++) {
-                // console.log(arr[i])
                 if (Array.isArray(arr[i])) {
                     v(arr[i])
                 } else {
                     value += arr[i]
                 }
 
-                console.log("hhh", value)
 
             }
 
@@ -62,7 +60,6 @@ const page = () => {
 
     }
 
-    console.log(new ArrayWrapper([[1, 2], [3, 4]]).valueOf())
 
     //-----------------------------------------
 

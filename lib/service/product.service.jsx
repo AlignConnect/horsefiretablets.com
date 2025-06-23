@@ -22,7 +22,6 @@ export const productApi = createApi({
             getShopifyData: builder.query({
                 query: (data) => {
 
-                    console.log(data)
 
                     return { url: "products/" + data?.id }
                 },

@@ -1,6 +1,11 @@
+import BitlyLinks from '@/components/hooks/Bitlylink'
 import React from 'react'
 
 function Section1() {
+
+
+    const links = BitlyLinks()
+
     return (
         <div className='  '>
             <div className="max-w-4xl mx-auto bg-white py-5 sm:py-10">
@@ -12,11 +17,9 @@ function Section1() {
                         <p className="fontArya text-2xl sm:text-3xl md:text-4xl font-bold text-center !leading-snug">अब मोटे और फौलादी लिंग के साथ देर तक सेक्स करना <span className="text-red-600"> एकदम आसान है, बस इसे आजमाए और कमाल देखें!</span>  </p>
 
                         <div className="text-center text-white font-bold mt-[7%]">
-                            {/* <a href="#form" className="inline-block bg-gradient-to-t from-red-500 to-red-700 px-1 rounded-full py-3 pop_imagehfv">
-                                <span className=" bg-gradient-to-b from-red-500 to-red-700 px-5 rounded-full py-2">ORDER NOW</span>
-                            </a> */}
 
-                            <a href="https://www.flipkart.com/r-ayurveda-horse-fire-tablets-ayurvedic-stamina-booster-men/p/itme353eac8ec05d" className=""><img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/e4e0ec8f-b49a-4b0a-2798-6cb6af788800/public" alt="pic" className="w-[200px] md:w-[300px] mx-auto -mt-3" loading='lazy' /></a>
+
+                            <a href={links?.flipkartMain} className=""><img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/e4e0ec8f-b49a-4b0a-2798-6cb6af788800/public" alt="pic" className="w-[200px] md:w-[300px] mx-auto -mt-3" loading='lazy' /></a>
 
                         </div>
                     </div>

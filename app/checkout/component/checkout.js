@@ -18,7 +18,6 @@ export class CheckoutFile {
         web_site_url: get_next_url,
       },
     });
-    console.log("res: ", res);
 
     if (!res.ok) {
       throw new Error("Interal Server Error Please Try out After some Time");
@@ -591,6 +590,16 @@ export const handleCheckApiKey = () => {
       case "/hftsz":
         get_next_url = process.env.NEXT_APP_URL_HFTSZ;
         get_next_key = process.env.NEXT_APP_API_KEY_HFTSZ;
+        break;
+
+      case "/hfrv1":
+        get_next_url = process.env.NEXT_APP_URL_HFRV1;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFRV1;
+        break;
+
+      case "/hfrv1f":
+        get_next_url = process.env.NEXT_APP_URL_HFRV1F;
+        get_next_key = process.env.NEXT_APP_API_KEY_HFRV1F;
         break;
 
       default:
