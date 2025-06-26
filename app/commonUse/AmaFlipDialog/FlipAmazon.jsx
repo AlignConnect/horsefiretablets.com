@@ -11,11 +11,11 @@ const FlipAmazon = () => {
 
 
             <div className="p-2 max-w-4xl w-full mx-auto text-center bg-white rounded-sm overflow-hidden">
-                <h5 className="purchaseProduct leading-tight text-center py-2 mb-0">HORSE FIRE TABLET खरीदने के लिए निचे क्लिक करें</h5>
-                <div className="grid grid-cols-2 items-center justify-center gap-3 py-1">
+                <h5 className="purchaseProduct leading-tight text-center pt-2  mb-0">Flipkart, Amazon से खरीदें और पाएं धमाकेदार ऑफर्स!!</h5>
+                <div className="grid grid-cols-2 items-center justify-center gap-3 mb-1">
                     <div className="">
                         <a href={links?.flipkartMain} className="w-full d-grid leading-none">
-                            <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/cd5c76b5-eacd-44c0-97c8-e26301f37600/public" alt="pic" className="w-[160px] md:w-[300px] mx-auto " loading='lazy' />
+                            <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/d6b53864-0097-4cde-fa30-9723cc268600/public" alt="pic" className="w-[160px] md:w-[300px] mx-auto " loading='lazy' />
                         </a>
 
 
@@ -23,7 +23,7 @@ const FlipAmazon = () => {
                     </div>
                     <div className="">
                         <a href={links?.amazonMain} className="w-full d-grid leading-none">
-                            <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/f80384a2-95de-44ba-1509-c69d0d2df500/public" alt="pic" className="w-[164px] md:w-[300px] mx-auto mb-2" loading='lazy' />
+                            <img src="https://imagedelivery.net/aacnHGAqlUDhaplA3bnkbA/9b630eb5-2ca6-44f4-5d28-d95a6cb1d800/public" alt="pic" className="w-[164px] md:w-[300px] mx-auto" loading='lazy' />
                         </a>
                     </div>
                 </div>
